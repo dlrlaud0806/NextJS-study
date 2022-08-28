@@ -11318,6 +11318,17 @@
       "ball5": 39,
       "ball6": 41,
       "ballbnus": 24
+    },
+    {
+      "idx": 1030,
+      "lot_date": "2022-08-27",
+      "ball1": 2,
+      "ball2": 5,
+      "ball3": 11,
+      "ball4": 17,
+      "ball5": 24,
+      "ball6": 29,
+      "ballbnus": 9
     }
   ]
 }
