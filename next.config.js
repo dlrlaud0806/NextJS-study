@@ -2,9 +2,6 @@
 const path = require("path");
 
 const nextConfig = {
-  compilerOptions: {
-    baseUrl: ".",
-  },
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },

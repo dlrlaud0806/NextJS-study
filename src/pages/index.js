@@ -12,37 +12,22 @@ export default function Home() {
   return (
     <div>
       <Seo title="Home" />
-      <h1>이번 주 당첨번호</h1>
-      <div className="balls">
-        <img src={`/balls/${ltCur.ball1}.svg`} />
-        <img src={`/balls/${ltCur.ball2}.svg`} />
-        <img src={`/balls/${ltCur.ball3}.svg`} />
-        <img src={`/balls/${ltCur.ball4}.svg`} />
-        <img src={`/balls/${ltCur.ball5}.svg`} />
-        <img src={`/balls/${ltCur.ball6}.svg`} />
-        <img className="plus" src={"/plus.svg"} />
-        <img src={`/balls/${ltCur.ballbnus}.svg`} />
+      <h1 className="p-4 text-lg text-center font-medium">이번 주 당첨번호</h1>
+      <div className="flex flex-row place-content-center space-x-2">
+        <img className="flex-1" src={`/balls/${ltCur.ball1}.svg`} />
+        <img className="flex-1" src={`/balls/${ltCur.ball2}.svg`} />
+        <img className="flex-1" src={`/balls/${ltCur.ball3}.svg`} />
+        <img className="flex-1" src={`/balls/${ltCur.ball4}.svg`} />
+        <img className="flex-1" src={`/balls/${ltCur.ball5}.svg`} />
+        <img className="flex-1" src={`/balls/${ltCur.ball6}.svg`} />
+        <img className="flex-1" src={"/plus.svg"} />
+        <img className="flex-1" src={`/balls/${ltCur.ballbnus}.svg`} />
       </div>
       <style jsx>{`
-        h1 {
-          align-items: center;
-          max-width: 500px;
-          max-height: 50px;
-        }
         img {
           max-width: 50px;
           max-height: 50px;
-          align-items: center;
-        }
-        .plus {
-          width: 10px;
-          height: 10px;
-          margin-top: 20px;
-        }
-        div .balls {
-          display: flex;
-          gap: 10px;
-          text-align: center;
+          margin-bottom: 5px;
         }
       `}</style>
     </div>
