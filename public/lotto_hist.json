@@ -11329,6 +11329,28 @@
       "ball5": 24,
       "ball6": 29,
       "ballbnus": 9
+    },
+    {
+      "idx": 1031,
+      "lot_date": "2022-09-03",
+      "ball1": 6,
+      "ball2": 7,
+      "ball3": 22,
+      "ball4": 32,
+      "ball5": 35,
+      "ball6": 36,
+      "ballbnus": 19
+    },
+    {
+      "idx": 1032,
+      "lot_date": "2022-09-10",
+      "ball1": 1,
+      "ball2": 6,
+      "ball3": 12,
+      "ball4": 19,
+      "ball5": 36,
+      "ball6": 42,
+      "ballbnus": 28
     }
   ]
 }
