@@ -13,7 +13,9 @@ export default function Home() {
   return (
     <div>
       <Seo title="Home" />
-      <h1 className="p-4 text-lg text-center font-medium">이번 주 당첨번호</h1>
+      <h1 className="p-4 text-lg text-center font-medium">
+        {ltCur.idx}회 당첨번호 ({ltCur.lot_date})
+      </h1>
       <div className="flex flex-row place-content-center space-x-2">
         <img className="flex-1" src={`/balls/${ltCur.ball1}.svg`} />
         <img className="flex-1" src={`/balls/${ltCur.ball2}.svg`} />
