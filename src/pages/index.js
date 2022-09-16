@@ -29,8 +29,11 @@ export default function Home() {
         당첨번호 내역 (~{ltCur.idx - 1}회)
       </h1>
       <div>
-        {lt_hist.map((lt) => (
-          <div className="flex flex-row place-content-center space-x-2">
+        {lt_hist.map((lt, idx) => (
+          <div
+            key={idx}
+            className="flex flex-row place-content-center space-x-2"
+          >
             <img className="flex-1" src={`/balls/${lt.ball1}.svg`} />
             <img className="flex-1" src={`/balls/${lt.ball2}.svg`} />
             <img className="flex-1" src={`/balls/${lt.ball3}.svg`} />
