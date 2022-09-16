@@ -24,3 +24,5 @@ jobs:
     - run: npm run build
     - run: npm run export
     - run: firebase deploy
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_KEY }}
