@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import Seo from "../components/Seo";
 
 export default function Home() {
-  const lottohist = require("../../public/lotto_hist.json");
+  const lottohist = require("../../public/lotto_hist.json"); //https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=1034
   let last = lottohist.length - 1;
   let ltCur = lottohist[last];
   const sorted_hist = Object.entries(lottohist.slice(-9, -1)).sort(
-    (a, b) => b["drwNoDate"] - a["drwNoDate"]
+    (a, b) => a["drwNo"] - b["drwNo"]
   );
   console.log(sorted_hist);
   // useEffect(() => {
@@ -38,7 +38,7 @@ export default function Home() {
             className="flex flex-row place-content-center space-x-2"
           >
             <h1 className="p-4 text-lg text-center font-medium">
-              {lt[1].drwNo - 1}
+              {lt[1].drwNo}
             </h1>
             <img className="flex-1" src={`/balls/${lt[1].drwtNo1}.svg`} />
             <img className="flex-1" src={`/balls/${lt[1].drwtNo2}.svg`} />
