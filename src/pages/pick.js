@@ -2,8 +2,9 @@ import Seo from "../components/Seo";
 import { useState } from "react";
 
 export default function Pick() {
-  let numbers = [...Array(46).keys()];
-  let pickednumbers = Array(46).fill(false);
+  const numbers = [...Array(46).keys()];
+  const pickednumbers = Array(46).fill(false);
+
   const [picks, setpicks] = useState([]);
   const [containpicks, setContpicks] = useState([]);
   const [exceptpicks, setExpicks] = useState([]);
@@ -43,6 +44,13 @@ export default function Pick() {
     tempPick[cPick] = !tempPick[cPick];
 
     setpicked(tempPick);
+  }
+
+  function clearAll(cPick) {
+    setpicks([]);
+    setContpicks([]);
+    setExpicks([]);
+    setpicked(pickednumbers);
   }
 
   function handleClick() {
@@ -87,12 +95,18 @@ export default function Pick() {
           />
         ))}
       </div>
-      <div className="max-w-md mx-auto container text-center">
+      <div className="max-w-md mx-auto flex justify-center p-4 space-x-5">
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white text-smfont-bold py-1 px-2 rounded space-y-2"
           onClick={handleClick}
         >
           추첨
+        </button>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white text-smfont-bold py-1 px-2 rounded space-y-2"
+          onClick={clearAll}
+        >
+          초기화
         </button>
         <div className="max-w-md mx-auto flex flex-wrap place-content-center space-x-1">
           {picks.map((ball, idx) => (
