@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Seo from "../components/Seo";
 
 export default function Home() {
-  const lottohist = require("../../public/lotto_hist.json"); //https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=1035
+  const lottohist = require("../../public/lotto_hist.json"); //https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=1037
   let last = lottohist.length - 1;
   let ltCur = lottohist[last];
   const sorted_hist = Object.entries(lottohist.slice(-9, -1)).sort(
